@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('insta_profiles', function (Blueprint $table) {
             $table->id();
             $table->string('profile_name');
+            $table->string('last_key')->nullable();
             $table->timestamps();
         });
     }

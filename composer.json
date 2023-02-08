@@ -10,6 +10,8 @@
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
+        "phpfastcache/phpfastcache": "^9.1",
+        "raiym/instagram-php-scraper": "^0.12.9",
         "tcg/voyager": "^1.6"
     },
     "require-dev": {
