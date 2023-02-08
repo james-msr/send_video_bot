@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/test', function () {
+    \App\Utils\SendVideos::sendVideos();
+    return 0;
+});
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
