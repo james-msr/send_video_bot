@@ -16,9 +16,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-//        $schedule->call(function () {
-//            SendVideos::sendVideos();
-//        })->everyTwoHours();
+//        $schedule->command('send:video')->everyFifteenMinutes();
     }
 
     /**

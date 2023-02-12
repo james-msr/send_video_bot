@@ -13,9 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('insta_profiles', function (Blueprint $table) {
+        Schema::create('channel_profile', function (Blueprint $table) {
             $table->id();
-            $table->string('profile_name');
+            $table->foreignId('channel_id')->references('id')->on('channels');
+            $table->foreignId('insta_profile_id')->references('id')->on('insta_profiles');
+            $table->index(['channel_id', 'insta_profile_id']);
+            $table->string('last_key')->nullable();
             $table->timestamps();
         });
     }
@@ -27,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('insta_profiles');
+        Schema::dropIfExists('channel_profile');
     }
 };
