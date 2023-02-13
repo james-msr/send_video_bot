@@ -26,7 +26,7 @@ class GetVideos
      */
     public static function getVideos(): array
     {
-        $instagram = Instagram::withCredentials(new Client(), 'james_msr0323', 'saidbaevm23', new Psr16Adapter('Files'));
+        $instagram = Instagram::withCredentials(new Client(), env('INSTAGRAM_USERNAME'), env('INSTAGRAM_PASSWORD'), new Psr16Adapter('Files'));
         $instagram->setUserAgent('User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0');
         $instagram->login();
         $instagram->saveSession();
